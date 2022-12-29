@@ -1,0 +1,5 @@
+fastapi==0.88.0
+pandas==1.5.2
+pydantic==1.10.2
+requests==2.28.1
+tqdm==4.64.1
