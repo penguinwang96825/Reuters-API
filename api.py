@@ -86,7 +86,7 @@ def get_reuters_by_search_(search='', pages=10):
         df['published_time'] = df['published_time'].apply(parse)
         df['date'] = df['published_time'].apply(lambda x: x.strftime("%Y-%m-%d"))
         df['time'] = df['published_time'].apply(lambda x: x.strftime("%H:%M:%S"))
-        df['link'] = df['canonical_url'].apply(lambda x: 'https://www.reuters.com/' + x)
+        df['link'] = df['canonical_url'].apply(lambda x: 'https://www.reuters.com' + x)
         df = df.drop(columns=['published_time', 'canonical_url'])
         return df
 
@@ -132,7 +132,7 @@ def get_reuters_by_section_(section, pages):
         df['published_time'] = df['published_time'].apply(parse)
         df['date'] = df['published_time'].apply(lambda x: x.strftime("%Y-%m-%d"))
         df['time'] = df['published_time'].apply(lambda x: x.strftime("%H:%M:%S"))
-        df['link'] = df['canonical_url'].apply(lambda x: 'https://www.reuters.com/' + x)
+        df['link'] = df['canonical_url'].apply(lambda x: 'https://www.reuters.com' + x)
         df = df.drop(columns=['published_time', 'canonical_url'])
         return df
 
